@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Almendra+Display&family=Bebas+Neue&family=Berkshire+Swash&family=Big+Shoulders+Inline+Display:wght@200&family=Bodoni+Moda:ital,opsz@1,6..96&family=Boogaloo&family=Bungee&family=Cinzel+Decorative&family=Cinzel:wght@400;600&family=Damion&family=Dorsa&family=Inter:wght@300&family=Kings&family=Lobster&family=MedievalSharp&family=Monoton&family=MonteCarlo&family=Ms+Madi&family=Orbitron&family=Syne:wght@800&family=Trochut&family=Unica+One&family=Zen+Dots&display=swap');
+@font-face {
+    font-family: 'KoPub Batang';
+    src: url(./fonts/KoPubBatang-Light.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container-fluid {
+    // margin: 0;
+    padding:3px;
+    height: 100vh;
+    background: black;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    position: relative;
+    grid-template-columns: repeat(11,calc(9.09090909091% - 15px));
+    gap: 15px;
+    color: #fff;
+    img {
+        position: absolute;
+        object-fit: cover;
+        width: 100%;
+        height: 90%;
+    }
+    .l-hide {
+        overflow: hidden;
+        position: relative;
+        display: inline-block;
+        transform: translateX(-200%);
+    }
+
+}
+
+.intro {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    // overflow: hidden;
+    grid-template-columns: 100%;
+    // clip-path: polygon(0 0, 0 100%, 0% 100%, 0% 0);
+    .name {
+        --name-line-bg: #0000ff;
+        width:8.5%;
+        height: 80%;
+        cursor: pointer;
+        z-index: 10;
+        font-family: 'KoPub Batang';
+        background: white;
+        // height: 80%;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        h1 {
+            // background: orange;
+            // height: 100%;
+            text-align: center;
+            font-weight: 100;
+            font-size: 5.1vw;
+            color: #000;
+            overflow: hidden;
+            position: relative;
+            display: grid;
+            // align-items: center;
+            // justify-content: center;
+        }
+        &::after {
+            width: 100%;
+            top: -5%;
+            height: 3px;
+            background: var(--name-line-bg);
+            content: '';
+            position: absolute;
+        }
+    }
+    .character {
+        width: 100%;
+        height: 100%;
+        // background: red;
+        z-index: 3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        .upper-name {
+            position: absolute;
+            top: 20%;
+            left: 30%;
+            font-size: 5vw;
+            font-family: 'Cinzel', serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &::after {
+                top: 0;
+            }
+        }
+        .lower-name {
+            position: absolute;
+            bottom: 20%;
+            right: 30%;
+            font-size: 5vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Cinzel Decorative',cursive;
+            &::after {
+                bottom: 0;
+            }
+        }
+        & > *::after {
+            width: 100%;
+            height: 3px;
+            position: absolute;
+            background: #fff;
+            content: '';
+        }
+
+    }
+}
+
+.circle {
+    bottom: 5%;
+    position: absolute;
+    left: 13%;
+    z-index: 3;
+    width: 6vw;
+    height: 6vw;
+    border-radius: 50%;
+    background:#fff;
+}
+.box {
+    top: 5%;
+    position: absolute;
+    right: 5%;
+    z-index: 3;
+    width: 6vw;
+    height: 6vw;
+    background:#fff;
+}
+
+.c-2 {
+    bottom: 5%;
+    left: 10%;
+    background: none;
+    border: 2px solid #fff;
+    mix-blend-mode: difference;
+}
+
+.b-2 {
+    right: 10%;
+    background: none;
+    border: 2px solid #fff;
+    mix-blend-mode: difference;
+}
